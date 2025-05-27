@@ -1,0 +1,13 @@
+47757cd8156e51d409e0103f5eb62274 *DESCRIPTION
+57d3d51e688af0a1904300f7021245a5 *NAMESPACE
+8ad034c2dcb9019dadf9b40b310b84a9 *R/mlob.R
+de268bdf2768b1bbeff50c4d56becc9f *README.md
+b943a1546a1e17be4eea235ec7b4616b *build/partial.rdb
+59b97609c4045423ff749c652f63ffdf *build/vignette.rds
+d9a26b794f80efc9f1b5ea09afef8152 *inst/doc/MultiLevelOptimalBayes-Intro.R
+5167fada05e544be3466d42de158082a *inst/doc/MultiLevelOptimalBayes-Intro.Rmd
+1387bcba5985e7355714c6fb3c0a74e3 *inst/doc/MultiLevelOptimalBayes-Intro.html
+fb3e07b76266176d0ab8885717cb9bd6 *man/mlob.Rd
+b4d7532f505c14a950941a2c43c8a1ee *tests/testthat.R
+79ee47abff7c6bd8313f145f8395a4b8 *tests/testthat/test-mlob.R
+5167fada05e544be3466d42de158082a *vignettes/MultiLevelOptimalBayes-Intro.Rmd
