@@ -83,6 +83,7 @@ summary(result_iris)
 
 # Example 2: usage with slightly unbalanced ChickWeight dataset
 
+\dontrun{
 result_ChickWeight <- mlob(
 weight ~ Diet, 
 data = ChickWeight, 
@@ -97,6 +98,7 @@ print(result_ChickWeight)
 # View summary statistics
 
 summary(result_ChickWeight)
+}
 
 # Example 3: usage with highly unbalanced mtcars dataset (adjusted balancing.limit)
 

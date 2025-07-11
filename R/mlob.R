@@ -72,6 +72,7 @@
 #' 
 #' # Example 2: usage with slightly unbalanced ChickWeight dataset
 #' 
+#' \dontrun{
 #' result_ChickWeight <- mlob(
 #' weight ~ Diet, 
 #' data = ChickWeight, 
@@ -86,6 +87,7 @@
 #' # View summary statistics
 #' 
 #' summary(result_ChickWeight)
+#' }
 #' 
 #' # Example 3: usage with highly unbalanced mtcars dataset (adjusted balancing.limit)
 #' 
@@ -147,6 +149,13 @@ mlob <- function(formula, data, group, balancing.limit=0.2, conf.level = 0.05, j
 
   all_vars <- all.vars(formula)
   response_var <- all_vars[1]
+  predictor_var <- all_vars[2]
+  
+  # Check that predictor_var is numeric
+  if (!is.numeric(data[[predictor_var]])) {
+    stop(sprintf("The main predictor variable '%s' must be numeric (not a factor or character).", predictor_var))
+  }
+  
 
   # Create the model matrix using the formula
   A <- stats::model.matrix(formula, data = data)
@@ -447,7 +456,7 @@ mlob <- function(formula, data, group, balancing.limit=0.2, conf.level = 0.05, j
     Bay_jackknife    <- estimate_Bay_CV_SE_jackknife_individual(data_CV)
     Bay$SE_beta_Bay  <- Bay_jackknife$SE_beta_Bay_ML_jackknife_individual
     # Bay$SE_beta_ML   <- Bay_jackknife$SE_beta_ML_jackknife_individual # open in case jackknife for ML needed
-    # If there were any gamma‐covariates, copy over their SEs
+    # If there were any gamma-covariates, copy over their SEs
     if (!is.null(Bay_jackknife$SE_gamma_jackknife_individual)) {
       Bay$SE_gamma   <- Bay_jackknife$SE_gamma_jackknife_individual
     }
@@ -793,7 +802,7 @@ summary.mlob_result <- function(object, ...) {
   # Display the note header
   cat("\nNote:\n")
   
-  # Three‐way branching without any stop()
+  # Three-way branching without any stop()
   if (!is.finite(se_ratio)) {
     
     # Case 1: missing, infinite, zero, etc.
@@ -802,7 +811,7 @@ summary.mlob_result <- function(object, ...) {
       sep = ""
     )
     
-  } else if (se_ratio <= 1.1) {
+  } else if (se_ratio >= 0.9 & se_ratio <= 1.1) {
     
     # Case 2: roughly equal
     cat(
@@ -811,7 +820,7 @@ summary.mlob_result <- function(object, ...) {
       sep = ""
     )
     
-  } else {
+  } else if (se_ratio > 1.1) {
     
     # Case 3: ML SE substantially larger
     cat(
@@ -820,9 +829,12 @@ summary.mlob_result <- function(object, ...) {
         (se_ratio - 1) * 100
       ),
       "  meaning that the optimized estimates are more accurate.\n",
-      "  Concerning the estimates themselves, the unoptimized ML estimates may differ greatly from the optimized estimates and should not be reported.\n",
-      "  As the optimized estimates are always at least as accurate as the unoptimized ML estimates,\n",
-      "  please use them and their corresponding standard errors (first table of output) for interpretation and reporting.\n",
+      "  Concerning the estimates themselves, the unoptimized ML estimates may\n",
+      "  differ greatly from the optimized estimates and should not be reported.\n",
+      "  As the optimized estimates are always at least as accurate as the\n",
+      "  unoptimized ML estimates,\n",
+      "  please use them and their corresponding standard errors (first table of\n",
+      "  output) for interpretation and reporting.\n",
       "  For more information, see Dashuk et al. (2025).\n",
       sep = ""
     )
@@ -1573,20 +1585,21 @@ estimate_Bay_CV <-
   Tau02_min <- max(0.01, tau_x2 - d_search * radius)
   Tau02_max <- max(0.01, tau_x2 + d_search * radius)
   
-  # Fallback to a fixed window if anything’s off
+  # Fallback to a fixed window if anything's off
   if (!all(is.finite(c(Tau02_min, Tau02_max))) || Tau02_min >= Tau02_max) {
-    Tau02_min <- 0
+    Tau02_min <- 0.01
     Tau02_max <- 10
+    warning('Please check grouping, as it does not explain the variation and may be meaningless.')
   }
   
   # Build the sequence
   Tau02_seq <- seq(
     from       = Tau02_min,
     to         = Tau02_max,
-    length.out = 101
+    length.out = 100
   )
   
-  W_seq <- seq(0, 1, by = 0.01)
+  W_seq <- seq(0.01, 1, by = 0.01)
   
   grid <- expand.grid(Tau02 = Tau02_seq, W = W_seq)
   
@@ -1595,8 +1608,6 @@ estimate_Bay_CV <-
   W = grid$W
 
   MSE_ML <- matrix(0, nrow = length(W), ncol = 1)
-
-
 
   # use grid search to find w and tau02 that give smallest MSE
   for (i in 1:length(W)){
@@ -1639,7 +1650,6 @@ estimate_Bay_CV <-
 
   beta_b_Bay <- tau_yx/((1-w_opt)*tau02_opt + w_opt*tau_x2)
 
-
   # use MSE_ML to find beta_b_Bay_ML with smallest MSE:
 
   #
@@ -1651,7 +1661,6 @@ estimate_Bay_CV <-
   tau02_opt_ML <- Tau02[ind_MSEbetabBayML]
 
   beta_b_Bay_ML <- tau_yx/((1-w_opt_ML)*tau02_opt_ML + w_opt_ML*tau_x2)
-
 
 
   # Compute standard errors of beta_b_Bay, beta_b_Bay_ML, beta_b_ML using their distributions
@@ -1675,8 +1684,6 @@ estimate_Bay_CV <-
 
     T_B_Bay_ML <- 0.25
   }
-
-
 
   SE_beta_ML <- abs((T_sum2 / (T_sum1 * (K_sum1 - 1))) * sqrt(abs((K_sum2 * (K_sum1 + K_sum2 - 1)) / (K_sum1 - 2))))
 
@@ -1780,7 +1787,7 @@ estimate_Bay_CV_SE_jackknife_individual <- function(data) {
   jackknife_beta_b_Bay_ML_individual <- numeric(r)
   jackknife_beta_b_ML_individual <- numeric(r)
   
-  # only if gamma‐covariates present
+  # only if gamma-covariates present
   has_gamma <- ("kc" %in% names(data) && data$kc > 0)
   if (has_gamma) {
     p_gamma <- data$kc
@@ -1827,7 +1834,7 @@ estimate_Bay_CV_SE_jackknife_individual <- function(data) {
     jackknife_beta_b_ML_individual[i] <- result_jackknife$beta_b_ML
     
     if (has_gamma) {
-      # assume res_j$gamma is a length‐kc numeric vector
+      # assume res_j$gamma is a length-kc numeric vector
       jackknife_gamma_individual[i, ] <- result_jackknife$gamma
     }
     

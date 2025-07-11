@@ -12,7 +12,7 @@
 
 
 
-<title>Introduction to MultiLevelOptimalBayes</title>
+<title>MultiLevelOptimalBayes-Intro</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -336,7 +336,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore">Introduction to MultiLevelOptimalBayes</h1>
+<h1 class="title toc-ignore">MultiLevelOptimalBayes-Intro</h1>
 
 
 
@@ -348,7 +348,7 @@ sample settings. This is especially useful in psychology, education, and
 other fields with hierarchical or nested data structures. We present the
 R package MultiLevelOptimalBayes (MLOB) for estimating between-group
 effects in multilevel latent variable models. MLOB employs a regularised
-Bayesian estimator devised by Dashuk, Hecht, Lüdtke, Robitzsch, and
+Bayesian estimator devised by Dashuk, Hecht, Luedtke, Robitzsch, and
 Zitzmann (2024), which was subsequently enhanced for additional
 covariates by the same authors in 2025. This estimator chooses prior
 parameters to minimise the mean squared error (MSE) of the between-group
@@ -374,11 +374,11 @@ and applies a data balancing procedure if the groups are unbalanced.</p>
 <div id="key-features" class="section level2">
 <h2>Key Features</h2>
 <ul>
-<li>✅ Suitable for small-sample, multilevel data</li>
-<li>✅ Performs regularized Bayesian estimation</li>
-<li>✅ Automatically balances data if necessary</li>
-<li>✅ Optional jackknife resampling for standard errors</li>
-<li>✅ Provides comparison with unregularized ML estimates</li>
+<li>Suitable for small-sample, multilevel data</li>
+<li>Performs regularized Bayesian estimation</li>
+<li>Automatically balances data if necessary</li>
+<li>Optional jackknife resampling for standard errors</li>
+<li>Provides comparison with unregularized ML estimates</li>
 </ul>
 </div>
 </div>
@@ -402,7 +402,7 @@ represents covariates.</li>
 <li><code>data</code>: A data.frame containing all variables in the
 formula and the grouping variable.</li>
 <li><code>group</code>: A string naming the grouping variable.</li>
-<li><code>balancing.limit</code>: Proportion (0–1) of the dataset that
+<li><code>balancing.limit</code>: Proportion (0-1) of the dataset that
 can be removed to balance group sizes. Default is 0.2.</li>
 <li><code>conf.level</code>: Confidence level for confidence intervals.
 Default is 0.95 (95% CI).</li>
@@ -502,10 +502,10 @@ for regularized estimation in two-level models, users should be aware of
 the following limitations:</p>
 <ul>
 <li><p><strong>Local Grid Search</strong>:<br />
-The optimization is restricted to a local 5σ region around the ML
+The optimization is restricted to a local 5*sigma region around the ML
 estimate. Although this region captures the true MSE minimum with high
-probability (≥ 0.999 for J = 5), it does not guarantee identification of
-the global minimum.</p></li>
+probability (&gt;= 0.999 for J = 5), it does not guarantee
+identification of the global minimum.</p></li>
 <li><p><strong>Assumption of Equal Group Sizes</strong>:<br />
 The estimator assumes equal group sizes to simplify the model. While
 averaging group sizes is a proposed solution, the method does not yet
