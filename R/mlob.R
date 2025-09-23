@@ -1,4 +1,4 @@
-#' Multi-Level Optimal Bayes Function (MLOB)
+#' MultiLevel Optimal Bayes Function (MLOB)
 #'
 #'
 #' Implements a regularized Bayesian approach that optimizes
@@ -68,9 +68,9 @@
 #' Steffen Zitzmann
 #' 
 #' @references
-#' Dashuk, V., Hecht, M., Luedtke, O., Robitzsch, A., & Zitzmann, S. (2024). \doi{10.13140/RG.2.2.18148.39048}
+#' Dashuk, V., Hecht, M., Luedtke, O., Robitzsch, A., & Zitzmann, S. (2025a). \doi{10.1017/psy.2025.10045}
 #' 
-#' Dashuk, V., Hecht, M., Luedtke, O., Robitzsch, A., & Zitzmann, S. (2024). \doi{10.1007/s41237-025-00264-7}
+#' Dashuk, V., Hecht, M., Luedtke, O., Robitzsch, A., & Zitzmann, S. (2025b). \doi{10.1007/s41237-025-00264-7}
 #' 
 #' Luedtke, O., Marsh, H. W., Robitzsch, A., Trautwein, U., Asparouhov, T., & Muthen, B. (2008). \doi{10.1037/a0012869}
 #'

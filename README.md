@@ -304,9 +304,9 @@ Steffen Zitzmann
 If you use MLOB in your research, please cite:
 
 Dashuk, V., Hecht, M., Luedtke, O., Robitzsch, A., & Zitzmann, S.
-(2024). An Optimally Regularized Estimator of Multilevel Latent Variable
+(2025). An Optimally Regularized Estimator of Multilevel Latent Variable
 Models, with Improved MSE Performance
-<https://doi.org/10.13140/RG.2.2.18148.39048>
+<https://doi.org/10.1017/psy.2025.10045>
 
 ## Contact:
 

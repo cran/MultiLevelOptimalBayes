@@ -192,7 +192,7 @@ summary.mlob_result <- function(object, ...) {
       "  unoptimized ML estimates,\n",
       "  please use them and their corresponding standard errors (first table of\n",
       "  output) for interpretation and reporting.\n",
-      "  For more information, see Dashuk et al. (2025).\n",
+      "  For more information, see Dashuk et al. (2025a).\n",
       sep = ""
     )
   }

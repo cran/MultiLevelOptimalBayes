@@ -22,8 +22,8 @@ library(MultiLevelOptimalBayes)
 
 # Overview
 
-**MultiLevelOptimalBayes (MLOB)** is designed for estimating two-level latent variable models, particularly in small sample settings. This is especially useful in psychology, education, and other fields with hierarchical or nested data structures. We present the R package MultiLevelOptimalBayes (MLOB) for estimating between-group effects in multilevel latent variable models. MLOB employs a regularised Bayesian estimator devised by Dashuk, Hecht, Luedtke, Robitzsch, and Zitzmann (2024), which was subsequently enhanced for additional covariates by the same authors in 2025. This estimator chooses prior parameters to minimise the mean squared error (MSE) of the between-group effect by effectively balancing bias and variance. The regularised Bayesian estimator provides MSE-optimal estimations due to the mean-variance tradeoff, especially in scenarios of small sample sizes and poor intraclass correlation (ICC).
-The MLOB software supports imbalanced group sizes through integrated data-balancing methods and offers comprehensive inference, including point estimates, standard errors, p-values, and confidence intervals for both primary regressors and covariates. To gain comprehensive understanding, we initially examine the theoretical underpinnings of the regularised Bayesian estimator (Dashuk et al. 2024, 2025), followed by a discussion of its implementation in MLOB, namely the core function mlob(). We illustrate the application of mlob() using real datasets. Consequently, we provide researchers in psychology, education, and related disciplines a robust, user-friendly instrument for dependable multilevel latent variable estimation, particularly in contexts characterised by small sample sizes and low ICCs.
+**MultiLevelOptimalBayes (MLOB)** is designed for estimating two-level latent variable models, particularly in small sample settings. This is especially useful in psychology, education, and other fields with hierarchical or nested data structures. We present the R package MultiLevelOptimalBayes (MLOB) for estimating between-group effects in multilevel latent variable models. MLOB employs a regularised Bayesian estimator devised by Dashuk, Hecht, Luedtke, Robitzsch, and Zitzmann (2025a), which was subsequently enhanced for additional covariates by the same authors. This estimator chooses prior parameters to minimise the mean squared error (MSE) of the between-group effect by effectively balancing bias and variance. The regularised Bayesian estimator provides MSE-optimal estimations due to the mean-variance tradeoff, especially in scenarios of small sample sizes and poor intraclass correlation (ICC).
+The MLOB software supports imbalanced group sizes through integrated data-balancing methods and offers comprehensive inference, including point estimates, standard errors, p-values, and confidence intervals for both primary regressors and covariates. To gain comprehensive understanding, we initially examine the theoretical underpinnings of the regularised Bayesian estimator (Dashuk et al. 2025a, 2025b), followed by a discussion of its implementation in MLOB, namely the core function mlob(). We illustrate the application of mlob() using real datasets. Consequently, we provide researchers in psychology, education, and related disciplines a robust, user-friendly instrument for dependable multilevel latent variable estimation, particularly in contexts characterised by small sample sizes and low ICCs.
 
 The core function `mlob()` estimates the between-group coefficient (`beta_b`) using a regularized Bayesian approach, and applies a data balancing procedure if the groups are unbalanced.
 
@@ -251,9 +251,13 @@ While `MultiLevelOptimalBayes` provides a robust solution for regularized estima
 
 # References
 
-Dashuk, V., Hecht, M., Luedtke, O., Robitzsch, A., & Zitzmann, S. (2024).  
-An Optimally Regularized Estimator of Multilevel Latent Variable Models, with Improved MSE Performance.  
-[https://doi.org/10.13140/RG.2.2.18148.39048](https://doi.org/10.13140/RG.2.2.18148.39048)  
+Dashuk, V., Hecht, M., Luedtke, O., Robitzsch, A., & Zitzmann, S. (2025a).
+An Optimally Regularized Estimator of Multilevel Latent Variable Models, with Improved MSE Performance.
+[https://doi.org/10.1017/psy.2025.10045](https://doi.org/10.1017/psy.2025.10045)
+
+Dashuk, V., Hecht, M., Lüdtke, O., Robitzsch, A., & Zitzmann, S. (2025b).
+Estimating context effects in small samples while controlling for covariates: an optimally regularized Bayesian estimator for multilevel latent variable models.
+[https://doi.org/10.1007/s41237-025-00264-7](https://doi.org/10.1007/s41237-025-00264-7)
 
 Luedtke, O., Marsh, H. W., Robitzsch, A., et al. (2008).  
 The multilevel latent covariate model: A new, more reliable approach to group-level effects in contextual studies.  
