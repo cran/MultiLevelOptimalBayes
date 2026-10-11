@@ -29,14 +29,14 @@
 #' 
 #' \preformatted{
 #' Summary of Coefficients:
-#'                     Estimate Std. Error Lower CI (99%) Upper CI (99%)   Z value   Pr(>|z|) Significance
-#' beta_b             0.4279681  0.7544766     -1.5154349       2.371371 0.5672384 0.57055223
-#' gamma_Petal.Length 0.4679522  0.2582579     -0.1972762       1.133181 1.8119567 0.06999289            .
+#'                     Estimate Std. Error Lower CI (99%) Upper CI (99%)   Z value Pr(>|z|) Significance
+#' beta_b             0.2957937 0.30457475     -0.4887389       1.080326 0.9711694 0.331464
+#' gamma_Petal.Length 0.4679522 0.05038678      0.3381645       0.597740 9.2872029 0.000000          ***
 #'
 #' For comparison, summary of coefficients from unoptimized analysis (ML):
-#'                    Estimate   Std. Error Lower CI (99%) Upper CI (99%)      Z value   Pr(>|z|) Significance
-#' beta_b             0.6027440 5.424780e+15  -1.397331e+16   1.397331e+16 1.111094e-16 1.00000000
-#' gamma_Petal.Length 0.4679522 2.582579e-01  -1.972762e-01   1.133181e+00 1.811957e+00 0.06999289            .
+#'                     Estimate Std. Error Lower CI (99%) Upper CI (99%)   Z value  Pr(>|z|) Significance
+#' beta_b             0.6027440 0.87389866     -1.6482698       2.853758 0.6897184 0.4903713
+#' gamma_Petal.Length 0.4679522 0.05038678      0.3381645       0.597740 9.2872029 0.0000000          ***
 #'
 #' Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #' }
@@ -81,7 +81,7 @@
 #' result_iris <- mlob(
 #' Sepal.Length ~ Sepal.Width + Petal.Length, 
 #' data = iris, group = 'Species',
-#' conf.level = 0.01,
+#' conf.level = 0.99,
 #' jackknife = FALSE)
 #' 
 #' # View summary statistics (similar to summary of a linear model);
@@ -99,8 +99,9 @@
 #' 
 #' summary(result_mtcars)
 #' 
-#' #' # Example 3: Using all available S3 methods on slightly unbalanced ChickWeight dataset
+#' # Example 3: Using all available S3 methods on slightly unbalanced ChickWeight dataset
 #' 
+#' \donttest{
 #' result <- mlob(weight ~ Time, data = ChickWeight, group = 'Diet', jackknife = FALSE)
 #' 
 #' # Display methods
@@ -122,6 +123,7 @@
 #' 
 #' # List all available methods
 #' methods(class = "mlob_result")
+#' }
 #' 
 #' @export
 mlob <- function(formula, data, group, balancing.limit=0.2, conf.level = 0.95, jackknife = FALSE, punish.coeff = 2, ...) {
@@ -378,6 +380,10 @@ mlob <- function(formula, data, group, balancing.limit=0.2, conf.level = 0.95, j
   # Store original data before processing
   original_data <- data
   
+  # The estimators reshape x, y and C into n x J matrices (one column per
+  # group), which requires the rows of each group to be contiguous.
+  A <- A[order(A$group), , drop = FALSE]
+  
   # changing the model matrix into a data frame called data
   data <-as.data.frame(A)
 
@@ -461,12 +467,20 @@ mlob <- function(formula, data, group, balancing.limit=0.2, conf.level = 0.95, j
 
   
   ML <- estimate_ML_CV(data_CV) # run ML estimator and get a preliminary estimation of b_b for estimate_Bay_CV
+  # Tolerances for "numerically zero" (co)variance components, relative to the
+  # scale of the data so that they do not depend on the units of x and y.
+  eps_x  <- sqrt(.Machine$double.eps) * stats::var(x)
+  eps_yx <- sqrt(.Machine$double.eps) * sqrt(stats::var(x) * stats::var(y))
+
   #check if there is any variation between group
-  if (ML$tau_x2==0 || ML$tau_yx==0){
+  if (abs(ML$tau_x2) <= eps_x || abs(ML$tau_yx) <= eps_yx){
     stop(sprintf("The provided data does not include between-group variation for the given model.\n  A two-level model is no longer necessary because the grouping structure does not add information.\n  Consider using a single-level model, treating all observations as independent."))
   }
+  if (ML$tau_x2 < -eps_x) {
+    warning(sprintf("The estimated between-group variance of '%s' is negative (%.3g): the group means carry less variation than expected from within-group variation alone.\n  Estimates of beta_b and their standard errors are not meaningful for these data.", predictor_var, ML$tau_x2))
+  }
   #check if there is any variation within group
-  if (ML$sigma_x2==0 || ML$sigma_yx==0){
+  if (ML$sigma_x2 <= eps_x || abs(ML$sigma_yx) <= eps_yx){
     stop(sprintf("The provided data does not include within-group variation for the given model.\n  All observations within a group are identical (or perfectly correlated).\n  Consider using a simpler model."))
   }
   

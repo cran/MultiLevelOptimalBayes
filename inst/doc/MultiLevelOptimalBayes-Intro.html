@@ -48,6 +48,7 @@ overflow: visible;
 }
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -442,25 +443,25 @@ interpreted with caution. # Examples</p>
 <span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt; Summary of Coefficients:</span></span>
 <span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt;                     Estimate Std. Error Lower CI (99%) Upper CI (99%)   Z value</span></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt; beta_b             0.8308711  1.4655556     -2.9441499       4.605892 0.5669325</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt; gamma_Petal.Length 0.4679522  0.2582579     -0.1972762       1.133181 1.8119567</span></span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt;                      Pr(&gt;|z|) Significance</span></span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="co">#&gt; beta_b             0.57076004             </span></span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a><span class="co">#&gt; gamma_Petal.Length 0.06999289            .</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt; beta_b             0.2957937 0.30457475     -0.4887389       1.080326 0.9711694</span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt; gamma_Petal.Length 0.4679522 0.05038678      0.3381645       0.597740 9.2872029</span></span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt;                    Pr(&gt;|z|) Significance</span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="co">#&gt; beta_b             0.331464             </span></span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a><span class="co">#&gt; gamma_Petal.Length 0.000000          ***</span></span>
 <span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a><span class="co">#&gt; For comparison, summary of coefficients from unoptimized analysis (ML):</span></span>
-<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a><span class="co">#&gt;                     Estimate   Std. Error Lower CI (99%) Upper CI (99%)</span></span>
-<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a><span class="co">#&gt; beta_b             0.6027440 5.424780e+15  -1.397331e+16   1.397331e+16</span></span>
-<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a><span class="co">#&gt; gamma_Petal.Length 0.4679522 2.582579e-01  -1.972762e-01   1.133181e+00</span></span>
-<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a><span class="co">#&gt;                         Z value   Pr(&gt;|z|) Significance</span></span>
-<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a><span class="co">#&gt; beta_b             1.111094e-16 1.00000000             </span></span>
-<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a><span class="co">#&gt; gamma_Petal.Length 1.811957e+00 0.06999289            .</span></span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a><span class="co">#&gt;                     Estimate Std. Error Lower CI (99%) Upper CI (99%)   Z value</span></span>
+<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a><span class="co">#&gt; beta_b             0.6027440 0.87389866     -1.6482698       2.853758 0.6897184</span></span>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a><span class="co">#&gt; gamma_Petal.Length 0.4679522 0.05038678      0.3381645       0.597740 9.2872029</span></span>
+<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a><span class="co">#&gt;                     Pr(&gt;|z|) Significance</span></span>
+<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a><span class="co">#&gt; beta_b             0.4903713             </span></span>
+<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a><span class="co">#&gt; gamma_Petal.Length 0.0000000          ***</span></span>
 <span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb3-30"><a href="#cb3-30" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span>
 <span id="cb3-31"><a href="#cb3-31" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb3-32"><a href="#cb3-32" tabindex="-1"></a><span class="co">#&gt; Note:</span></span>
-<span id="cb3-33"><a href="#cb3-33" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 3.701518e+17% larger than the standard error obtained through our optimization procedure,</span></span>
+<span id="cb3-33"><a href="#cb3-33" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 186.9% larger than the standard error obtained through our optimization procedure,</span></span>
 <span id="cb3-34"><a href="#cb3-34" tabindex="-1"></a><span class="co">#&gt;   meaning that the optimized estimates are more accurate.</span></span>
 <span id="cb3-35"><a href="#cb3-35" tabindex="-1"></a><span class="co">#&gt;   Concerning the estimates themselves, the unoptimized ML estimates may</span></span>
 <span id="cb3-36"><a href="#cb3-36" tabindex="-1"></a><span class="co">#&gt;   differ greatly from the optimized estimates and should not be reported.</span></span>
@@ -485,45 +486,45 @@ interpreted with caution. # Examples</p>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co">#&gt;  mlob(weight ~ Time, data = ChickWeight, group = Diet, conf.level = 0.95, jackknife = FALSE) </span></span>
 <span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co">#&gt; Coefficients</span></span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="co">#&gt;    beta_b</span></span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="co">#&gt;  4.404382</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="co">#&gt;      beta_b</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="co">#&gt;  -0.0171691</span></span>
 <span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a><span class="co">#&gt; Standard_Error</span></span>
-<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a><span class="co">#&gt;    beta_b</span></span>
-<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a><span class="co">#&gt;  334.2915</span></span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a><span class="co">#&gt;      beta_b</span></span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a><span class="co">#&gt;  0.05542791</span></span>
 <span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a><span class="co">#&gt; Confidence_Interval (95%)</span></span>
-<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a><span class="co">#&gt;            Lower    Upper</span></span>
-<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a><span class="co">#&gt; beta_b -650.7949 659.6036</span></span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a><span class="co">#&gt;             Lower     Upper</span></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a><span class="co">#&gt; beta_b -0.1258058 0.0914676</span></span>
 <span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a><span class="co">#&gt; Z value</span></span>
 <span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a><span class="co">#&gt;      beta_b</span></span>
-<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a><span class="co">#&gt;  0.01317528</span></span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a><span class="co">#&gt;  -0.3097556</span></span>
 <span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-29"><a href="#cb4-29" tabindex="-1"></a><span class="co">#&gt; p value</span></span>
-<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a><span class="co">#&gt;    beta_b</span></span>
-<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a><span class="co">#&gt;  0.989488</span></span>
+<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a><span class="co">#&gt;     beta_b</span></span>
+<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a><span class="co">#&gt;  0.7567468</span></span>
 <span id="cb4-32"><a href="#cb4-32" tabindex="-1"></a><span class="fu">summary</span>(result_chick)</span>
 <span id="cb4-33"><a href="#cb4-33" tabindex="-1"></a><span class="co">#&gt; Call:</span></span>
 <span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a><span class="co">#&gt;  mlob(weight ~ Time, data = ChickWeight, group = Diet, conf.level = 0.95, jackknife = FALSE) </span></span>
 <span id="cb4-35"><a href="#cb4-35" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-36"><a href="#cb4-36" tabindex="-1"></a><span class="co">#&gt; Summary of Coefficients:</span></span>
-<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (95%) Upper CI (95%)    Z value Pr(&gt;|z|)</span></span>
-<span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a><span class="co">#&gt; beta_b 4.404382   334.2915      -650.7949       659.6036 0.01317528 0.989488</span></span>
+<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a><span class="co">#&gt;          Estimate Std. Error Lower CI (95%) Upper CI (95%)    Z value  Pr(&gt;|z|)</span></span>
+<span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a><span class="co">#&gt; beta_b -0.0171691 0.05542791     -0.1258058      0.0914676 -0.3097556 0.7567468</span></span>
 <span id="cb4-39"><a href="#cb4-39" tabindex="-1"></a><span class="co">#&gt;        Significance</span></span>
 <span id="cb4-40"><a href="#cb4-40" tabindex="-1"></a><span class="co">#&gt; beta_b             </span></span>
 <span id="cb4-41"><a href="#cb4-41" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-42"><a href="#cb4-42" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-43"><a href="#cb4-43" tabindex="-1"></a><span class="co">#&gt; For comparison, summary of coefficients from unoptimized analysis (ML):</span></span>
-<span id="cb4-44"><a href="#cb4-44" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (95%) Upper CI (95%)     Z value  Pr(&gt;|z|)</span></span>
-<span id="cb4-45"><a href="#cb4-45" tabindex="-1"></a><span class="co">#&gt; beta_b 3.137082     479.57      -936.8029        943.077 0.006541447 0.9947807</span></span>
+<span id="cb4-44"><a href="#cb4-44" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (95%) Upper CI (95%)   Z value  Pr(&gt;|z|)</span></span>
+<span id="cb4-45"><a href="#cb4-45" tabindex="-1"></a><span class="co">#&gt; beta_b 2.209348   7.137118      -11.77915       16.19784 0.3095574 0.7568975</span></span>
 <span id="cb4-46"><a href="#cb4-46" tabindex="-1"></a><span class="co">#&gt;        Significance</span></span>
 <span id="cb4-47"><a href="#cb4-47" tabindex="-1"></a><span class="co">#&gt; beta_b             </span></span>
 <span id="cb4-48"><a href="#cb4-48" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-49"><a href="#cb4-49" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span>
 <span id="cb4-50"><a href="#cb4-50" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb4-51"><a href="#cb4-51" tabindex="-1"></a><span class="co">#&gt; Note:</span></span>
-<span id="cb4-52"><a href="#cb4-52" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 43.46% larger than the standard error obtained through our optimization procedure,</span></span>
+<span id="cb4-52"><a href="#cb4-52" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 12776% larger than the standard error obtained through our optimization procedure,</span></span>
 <span id="cb4-53"><a href="#cb4-53" tabindex="-1"></a><span class="co">#&gt;   meaning that the optimized estimates are more accurate.</span></span>
 <span id="cb4-54"><a href="#cb4-54" tabindex="-1"></a><span class="co">#&gt;   Concerning the estimates themselves, the unoptimized ML estimates may</span></span>
 <span id="cb4-55"><a href="#cb4-55" tabindex="-1"></a><span class="co">#&gt;   differ greatly from the optimized estimates and should not be reported.</span></span>
@@ -532,31 +533,15 @@ interpreted with caution. # Examples</p>
 <span id="cb4-58"><a href="#cb4-58" tabindex="-1"></a><span class="co">#&gt;   please use them and their corresponding standard errors (first table of</span></span>
 <span id="cb4-59"><a href="#cb4-59" tabindex="-1"></a><span class="co">#&gt;   output) for interpretation and reporting.</span></span>
 <span id="cb4-60"><a href="#cb4-60" tabindex="-1"></a><span class="co">#&gt;   For more information, see Dashuk et al. (2025a).</span></span></code></pre></div>
-<p>** Interperation of the results for Chickenweight Dataset **</p>
-<p>Estimated beta_b and additional covariates effects, denoted as
-gamma_Diet3 and gamma_Diet4, are included in the end result table. We
-did not incorporate any additional covariates into the mlob() formula.
-However, due to the fact that Diet is a four-level factor, mlob()
-considers Diet 1 to be the primary regressor (X), excludes Diet 2 from
-the design matrix to prevent multicollinearity, and reports the
-remaining levels as gamma_Diet3 and gamma_Diet4, using Diet 2 as the
-reference. The results of the estimation indicate a substantial
-distinction between the regularised Bayesian estimator (first table) and
-the ML estimator (second table). Beta_b’s regularised Bayesian estimator
-is 5.108, with a statistically significant p-value of 0.0139. This
-implies that the average weight of chicks on Diet 1 is approximately 5g
-more than that of chicks on Diet 2 at each time point. In contrast, the
-ML estimate of the between-group effect beta_b is significantly larger
-(13.993) but not statistically significant (p value of 0.3910),
-demonstrating how standard ML can overstate the group-level effect when
-data is scarce. The positive estimate of gamma_Diet3 is 41.69 and is
-highly significant for both estimators (p = 0.0048 in
-MultiLevelOptimalBayes (MLOB)). This suggests that chicks on Diet 3 have
-a significant increase in weight in comparison to the baseline group.
-Gamma_Diet4 has an estimate of 29.64, but its p-value of 0.0504 is
-marginally significant at the 5% level. This implies that Diet 4 has a
-positive impact on weight; however, the magnitude of this effect is less
-significant than that of Diet 3.</p>
+<p><strong>Interpretation of the results for the ChickWeight
+dataset</strong></p>
+<p>All chicks are weighed at the same time points, so <code>Time</code>
+hardly varies between the diet groups: its estimated between-group
+variance is not positive, and <code>mlob()</code> warns that the
+estimates of <code>beta_b</code> and their standard errors are not
+meaningful for these data. The example illustrates the balancing
+procedure and this warning; for a substantive analysis, the predictor
+needs to vary between groups.</p>
 </div>
 <div id="example-3-highly-unbalanced-mtcars-dataset" class="section level2">
 <h2>Example 3: Highly Unbalanced mtcars Dataset</h2>
@@ -572,37 +557,46 @@ significant than that of Diet 3.</p>
 <span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="co">#&gt;  mlob(mpg ~ hp + wt + am + hp:wt + hp:am, data = mtcars, group = cyl, balancing.limit = 0.35, conf.level = 0.95) </span></span>
 <span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="co">#&gt; Summary of Coefficients:</span></span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="co">#&gt;                 Estimate  Std. Error Lower CI (95%) Upper CI (95%)     Z value</span></span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="co">#&gt; beta_b      -0.094774009         Inf           -Inf            Inf  0.00000000</span></span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="co">#&gt; gamma_wt     0.129605570 10.03113447   -19.53105671    19.79026785  0.01292033</span></span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co">#&gt; gamma_am     8.243531222  5.02593394    -1.60711830    18.09418074  1.64019888</span></span>
-<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="co">#&gt; gamma_hp:wt -0.003592393  0.04892602    -0.09948564     0.09230085 -0.07342499</span></span>
-<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="co">#&gt; gamma_hp:am -0.063955624  0.16654503    -0.39037788     0.26246663 -0.38401401</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="co">#&gt;                 Estimate  Std. Error Lower CI (95%) Upper CI (95%)    Z value</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="co">#&gt; beta_b      -0.022150377  0.02200285    -0.06527516     0.02097441 -1.0067051</span></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="co">#&gt; gamma_wt    -5.109432015  7.60951564   -20.02380861     9.80494458 -0.6714530</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co">#&gt; gamma_am     5.194266715 12.06095092   -18.44476271    28.83329614  0.4306681</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="co">#&gt; gamma_hp:wt  0.007257284  0.04403082    -0.07904153     0.09355610  0.1648228</span></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="co">#&gt; gamma_hp:am -0.047559777  0.10255003    -0.24855413     0.15343458 -0.4637715</span></span>
 <span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a><span class="co">#&gt;              Pr(&gt;|z|) Significance</span></span>
-<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="co">#&gt; beta_b      1.0000000             </span></span>
-<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a><span class="co">#&gt; gamma_wt    0.9896914             </span></span>
-<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="co">#&gt; gamma_am    0.1009638             </span></span>
-<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a><span class="co">#&gt; gamma_hp:wt 0.9414679             </span></span>
-<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a><span class="co">#&gt; gamma_hp:am 0.7009681             </span></span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="co">#&gt; beta_b      0.3140765             </span></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a><span class="co">#&gt; gamma_wt    0.5019320             </span></span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="co">#&gt; gamma_am    0.6667097             </span></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a><span class="co">#&gt; gamma_hp:wt 0.8690834             </span></span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a><span class="co">#&gt; gamma_hp:am 0.6428115             </span></span>
 <span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a><span class="co">#&gt; For comparison, summary of coefficients from unoptimized analysis (ML):</span></span>
-<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a><span class="co">#&gt;                 Estimate   Std. Error Lower CI (95%) Upper CI (95%)</span></span>
-<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a><span class="co">#&gt; beta_b      -0.094774009 3.755040e+14  -7.359744e+14   7.359744e+14</span></span>
-<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a><span class="co">#&gt; gamma_wt     0.129605570 1.003113e+01  -1.953106e+01   1.979027e+01</span></span>
-<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a><span class="co">#&gt; gamma_am     8.243531222 5.025934e+00  -1.607118e+00   1.809418e+01</span></span>
-<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a><span class="co">#&gt; gamma_hp:wt -0.003592393 4.892602e-02  -9.948564e-02   9.230085e-02</span></span>
-<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a><span class="co">#&gt; gamma_hp:am -0.063955624 1.665450e-01  -3.903779e-01   2.624666e-01</span></span>
-<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a><span class="co">#&gt;                   Z value  Pr(&gt;|z|) Significance</span></span>
-<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a><span class="co">#&gt; beta_b      -2.523915e-16 1.0000000             </span></span>
-<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a><span class="co">#&gt; gamma_wt     1.292033e-02 0.9896914             </span></span>
-<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a><span class="co">#&gt; gamma_am     1.640199e+00 0.1009638             </span></span>
-<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a><span class="co">#&gt; gamma_hp:wt -7.342499e-02 0.9414679             </span></span>
-<span id="cb5-39"><a href="#cb5-39" tabindex="-1"></a><span class="co">#&gt; gamma_hp:am -3.840140e-01 0.7009681             </span></span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a><span class="co">#&gt;                 Estimate  Std. Error Lower CI (95%) Upper CI (95%)    Z value</span></span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a><span class="co">#&gt; beta_b      -0.044388444  0.06405843    -0.16994066     0.08116377 -0.6929368</span></span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a><span class="co">#&gt; gamma_wt    -5.109432015  7.60951564   -20.02380861     9.80494458 -0.6714530</span></span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a><span class="co">#&gt; gamma_am     5.194266715 12.06095092   -18.44476271    28.83329614  0.4306681</span></span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a><span class="co">#&gt; gamma_hp:wt  0.007257284  0.04403082    -0.07904153     0.09355610  0.1648228</span></span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a><span class="co">#&gt; gamma_hp:am -0.047559777  0.10255003    -0.24855413     0.15343458 -0.4637715</span></span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a><span class="co">#&gt;              Pr(&gt;|z|) Significance</span></span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a><span class="co">#&gt; beta_b      0.4883492             </span></span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a><span class="co">#&gt; gamma_wt    0.5019320             </span></span>
+<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a><span class="co">#&gt; gamma_am    0.6667097             </span></span>
+<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a><span class="co">#&gt; gamma_hp:wt 0.8690834             </span></span>
+<span id="cb5-39"><a href="#cb5-39" tabindex="-1"></a><span class="co">#&gt; gamma_hp:am 0.6428115             </span></span>
 <span id="cb5-40"><a href="#cb5-40" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb5-41"><a href="#cb5-41" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span>
 <span id="cb5-42"><a href="#cb5-42" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb5-43"><a href="#cb5-43" tabindex="-1"></a><span class="co">#&gt; Note:</span></span></code></pre></div>
+<span id="cb5-43"><a href="#cb5-43" tabindex="-1"></a><span class="co">#&gt; Note:</span></span>
+<span id="cb5-44"><a href="#cb5-44" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 191.1% larger than the standard error obtained through our optimization procedure,</span></span>
+<span id="cb5-45"><a href="#cb5-45" tabindex="-1"></a><span class="co">#&gt;   meaning that the optimized estimates are more accurate.</span></span>
+<span id="cb5-46"><a href="#cb5-46" tabindex="-1"></a><span class="co">#&gt;   Concerning the estimates themselves, the unoptimized ML estimates may</span></span>
+<span id="cb5-47"><a href="#cb5-47" tabindex="-1"></a><span class="co">#&gt;   differ greatly from the optimized estimates and should not be reported.</span></span>
+<span id="cb5-48"><a href="#cb5-48" tabindex="-1"></a><span class="co">#&gt;   As the optimized estimates are always at least as accurate as the</span></span>
+<span id="cb5-49"><a href="#cb5-49" tabindex="-1"></a><span class="co">#&gt;   unoptimized ML estimates,</span></span>
+<span id="cb5-50"><a href="#cb5-50" tabindex="-1"></a><span class="co">#&gt;   please use them and their corresponding standard errors (first table of</span></span>
+<span id="cb5-51"><a href="#cb5-51" tabindex="-1"></a><span class="co">#&gt;   output) for interpretation and reporting.</span></span>
+<span id="cb5-52"><a href="#cb5-52" tabindex="-1"></a><span class="co">#&gt;   For more information, see Dashuk et al. (2025a).</span></span></code></pre></div>
 </div>
 </div>
 <div id="output" class="section level1">
@@ -632,46 +626,46 @@ with results in familiar ways. Here are all available methods:</p>
 <span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="co">#&gt;  mlob(weight ~ Time, data = ChickWeight, group = Diet, conf.level = 0.95, jackknife = FALSE) </span></span>
 <span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="co">#&gt; Coefficients</span></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="co">#&gt;    beta_b</span></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co">#&gt;  35.38337</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="co">#&gt;       beta_b</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co">#&gt;  -0.01861521</span></span>
 <span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="co">#&gt; Standard_Error</span></span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="co">#&gt;    beta_b</span></span>
-<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="co">#&gt;  255.9379</span></span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="co">#&gt;      beta_b</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="co">#&gt;  0.06168138</span></span>
 <span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a><span class="co">#&gt; Confidence_Interval (95%)</span></span>
-<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="co">#&gt;            Lower    Upper</span></span>
-<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="co">#&gt; beta_b -466.2456 537.0124</span></span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="co">#&gt;             Lower     Upper</span></span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="co">#&gt; beta_b -0.1395085 0.1022781</span></span>
 <span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a><span class="co">#&gt; Z value</span></span>
-<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a><span class="co">#&gt;     beta_b</span></span>
-<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a><span class="co">#&gt;  0.1382498</span></span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a><span class="co">#&gt;      beta_b</span></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a><span class="co">#&gt;  -0.3017963</span></span>
 <span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a><span class="co">#&gt; p value</span></span>
-<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a><span class="co">#&gt;    beta_b</span></span>
-<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a><span class="co">#&gt;  0.890043</span></span></code></pre></div>
+<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a><span class="co">#&gt;     beta_b</span></span>
+<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a><span class="co">#&gt;  0.7628074</span></span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Summary method - comprehensive summary with significance stars and comparison to unoptimized ML</span></span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">summary</span>(result)</span>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">#&gt; Call:</span></span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="co">#&gt;  mlob(weight ~ Time, data = ChickWeight, group = Diet, conf.level = 0.95, jackknife = FALSE) </span></span>
 <span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="co">#&gt; Summary of Coefficients:</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (95%) Upper CI (95%)   Z value Pr(&gt;|z|)</span></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="co">#&gt; beta_b 35.38337   255.9379      -466.2456       537.0124 0.1382498 0.890043</span></span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="co">#&gt;        Significance</span></span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="co">#&gt; beta_b             </span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="co">#&gt;           Estimate Std. Error Lower CI (95%) Upper CI (95%)    Z value</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="co">#&gt; beta_b -0.01861521 0.06168138     -0.1395085      0.1022781 -0.3017963</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="co">#&gt;         Pr(&gt;|z|) Significance</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="co">#&gt; beta_b 0.7628074             </span></span>
 <span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="co">#&gt; For comparison, summary of coefficients from unoptimized analysis (ML):</span></span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (95%) Upper CI (95%)    Z value Pr(&gt;|z|)</span></span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="co">#&gt; beta_b 19.35236   282.5233      -534.3832       573.0879 0.06849825 0.945389</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (95%) Upper CI (95%)   Z value  Pr(&gt;|z|)</span></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="co">#&gt; beta_b 2.520974   8.362585      -13.86939       18.91134 0.3014587 0.7630648</span></span>
 <span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co">#&gt;        Significance</span></span>
 <span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="co">#&gt; beta_b             </span></span>
 <span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span>
 <span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a><span class="co">#&gt; Note:</span></span>
-<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 10.39% larger than the standard error obtained through our optimization procedure,</span></span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 13458% larger than the standard error obtained through our optimization procedure,</span></span>
 <span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a><span class="co">#&gt;   meaning that the optimized estimates are more accurate.</span></span>
 <span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a><span class="co">#&gt;   Concerning the estimates themselves, the unoptimized ML estimates may</span></span>
 <span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a><span class="co">#&gt;   differ greatly from the optimized estimates and should not be reported.</span></span>
@@ -685,52 +679,54 @@ with results in familiar ways. Here are all available methods:</p>
 <h2>Statistical Methods</h2>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Extract coefficients as a data frame</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fu">coef</span>(result)</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">#&gt;     beta_b</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co">#&gt; 1 35.38337</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">#&gt;        beta_b</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co">#&gt; 1 -0.01861521</span></span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="co"># Extract standard errors</span></span>
 <span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="fu">se</span>(result)</span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">#&gt;   beta_b </span></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co">#&gt; 255.9379</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">#&gt;     beta_b </span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co">#&gt; 0.06168138</span></span>
 <span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a></span>
 <span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co"># Extract variance-covariance matrix (diagonal only)</span></span>
 <span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="fu">vcov</span>(result)</span>
-<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="co">#&gt;   beta_b </span></span>
-<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="co">#&gt; 65504.19</span></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="co">#&gt;      beta_b </span></span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="co">#&gt; 0.003804592</span></span>
 <span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a></span>
 <span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a><span class="co"># Extract confidence intervals</span></span>
 <span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a><span class="fu">confint</span>(result)</span>
-<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a><span class="co">#&gt;             2.5%    97.5%</span></span>
-<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a><span class="co">#&gt; beta_b -466.2456 537.0124</span></span>
+<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a><span class="co">#&gt;              2.5%     97.5%</span></span>
+<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a><span class="co">#&gt; beta_b -0.1395085 0.1022781</span></span>
 <span id="cb8-20"><a href="#cb8-20" tabindex="-1"></a></span>
 <span id="cb8-21"><a href="#cb8-21" tabindex="-1"></a><span class="co"># Extract confidence intervals for specific parameters</span></span>
 <span id="cb8-22"><a href="#cb8-22" tabindex="-1"></a><span class="fu">confint</span>(result, <span class="st">&quot;beta_b&quot;</span>)</span>
-<span id="cb8-23"><a href="#cb8-23" tabindex="-1"></a><span class="co">#&gt;             2.5%    97.5%</span></span>
-<span id="cb8-24"><a href="#cb8-24" tabindex="-1"></a><span class="co">#&gt; beta_b -466.2456 537.0124</span></span>
+<span id="cb8-23"><a href="#cb8-23" tabindex="-1"></a><span class="co">#&gt;              2.5%     97.5%</span></span>
+<span id="cb8-24"><a href="#cb8-24" tabindex="-1"></a><span class="co">#&gt; beta_b -0.1395085 0.1022781</span></span>
 <span id="cb8-25"><a href="#cb8-25" tabindex="-1"></a></span>
 <span id="cb8-26"><a href="#cb8-26" tabindex="-1"></a><span class="co"># Extract confidence intervals with different confidence level</span></span>
 <span id="cb8-27"><a href="#cb8-27" tabindex="-1"></a><span class="fu">confint</span>(result, <span class="at">level =</span> <span class="fl">0.99</span>)</span>
-<span id="cb8-28"><a href="#cb8-28" tabindex="-1"></a><span class="co">#&gt;             0.5%    99.5%</span></span>
-<span id="cb8-29"><a href="#cb8-29" tabindex="-1"></a><span class="co">#&gt; beta_b -623.8689 694.6356</span></span></code></pre></div>
+<span id="cb8-28"><a href="#cb8-28" tabindex="-1"></a><span class="co">#&gt;              0.5%     99.5%</span></span>
+<span id="cb8-29"><a href="#cb8-29" tabindex="-1"></a><span class="co">#&gt; beta_b -0.1774959 0.1402655</span></span></code></pre></div>
 </div>
 <div id="utility-methods" class="section level2">
 <h2>Utility Methods</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># Convert results to a data frame format</span></span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">as.data.frame</span>(result)</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (95%) Upper CI (95%)   Z value Pr(&gt;|z|)</span></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co">#&gt; beta_b 35.38337   255.9379      -466.2456       537.0124 0.1382498 0.890043</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co"># Get dimensions (number of parameters)</span></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="fu">dim</span>(result)</span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="co">#&gt; [1] 1 1</span></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="co"># Get number of parameters</span></span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="fu">length</span>(result)</span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a><span class="co"># Get parameter names</span></span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a><span class="fu">names</span>(result)</span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a><span class="co">#&gt; [1] &quot;beta_b&quot;</span></span></code></pre></div>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">#&gt;           Estimate Std. Error Lower CI (95%) Upper CI (95%)    Z value</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co">#&gt; beta_b -0.01861521 0.06168138     -0.1395085      0.1022781 -0.3017963</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">#&gt;         Pr(&gt;|z|)</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co">#&gt; beta_b 0.7628074</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="co"># Get dimensions (number of parameters)</span></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="fu">dim</span>(result)</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="co">#&gt; [1] 1 1</span></span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="co"># Get number of parameters</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="fu">length</span>(result)</span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a><span class="co"># Get parameter names</span></span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a><span class="fu">names</span>(result)</span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a><span class="co">#&gt; [1] &quot;beta_b&quot;</span></span></code></pre></div>
 </div>
 <div id="update-method" class="section level2">
 <h2>Update Method</h2>
@@ -741,22 +737,22 @@ with results in familiar ways. Here are all available methods:</p>
 <span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">#&gt;  mlob(weight ~ Time, data = data, group = Diet, conf.level = 0.99, jackknife = FALSE) </span></span>
 <span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">#&gt; Summary of Coefficients:</span></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (99%) Upper CI (99%)   Z value Pr(&gt;|z|)</span></span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co">#&gt; beta_b 35.38337   255.9379      -623.8689       694.6356 0.1382498 0.890043</span></span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="co">#&gt;        Significance</span></span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">#&gt; beta_b             </span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co">#&gt;           Estimate Std. Error Lower CI (99%) Upper CI (99%)    Z value</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co">#&gt; beta_b -0.01861521 0.06168138     -0.1774959      0.1402655 -0.3017963</span></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="co">#&gt;         Pr(&gt;|z|) Significance</span></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">#&gt; beta_b 0.7628074             </span></span>
 <span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">#&gt; For comparison, summary of coefficients from unoptimized analysis (ML):</span></span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (99%) Upper CI (99%)    Z value Pr(&gt;|z|)</span></span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="co">#&gt; beta_b 19.35236   282.5233      -708.3796       747.0843 0.06849825 0.945389</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="co">#&gt;        Estimate Std. Error Lower CI (99%) Upper CI (99%)   Z value  Pr(&gt;|z|)</span></span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="co">#&gt; beta_b 2.520974   8.362585      -19.01962       24.06157 0.3014587 0.7630648</span></span>
 <span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a><span class="co">#&gt;        Significance</span></span>
 <span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a><span class="co">#&gt; beta_b             </span></span>
 <span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span>
 <span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a><span class="co">#&gt; Note:</span></span>
-<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 10.39% larger than the standard error obtained through our optimization procedure,</span></span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a><span class="co">#&gt;   The standard error from unoptimized ML estimation is about 13458% larger than the standard error obtained through our optimization procedure,</span></span>
 <span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a><span class="co">#&gt;   meaning that the optimized estimates are more accurate.</span></span>
 <span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a><span class="co">#&gt;   Concerning the estimates themselves, the unoptimized ML estimates may</span></span>
 <span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a><span class="co">#&gt;   differ greatly from the optimized estimates and should not be reported.</span></span>
@@ -804,8 +800,8 @@ together:</p>
 <span id="cb12-22"><a href="#cb12-22" tabindex="-1"></a>)</span>
 <span id="cb12-23"><a href="#cb12-23" tabindex="-1"></a></span>
 <span id="cb12-24"><a href="#cb12-24" tabindex="-1"></a><span class="fu">print</span>(custom_summary)</span>
-<span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a><span class="co">#&gt;   Parameter Estimate      SE  CI_Lower CI_Upper</span></span>
-<span id="cb12-26"><a href="#cb12-26" tabindex="-1"></a><span class="co">#&gt; 1    beta_b 6.706054 525.358 -1346.527 1359.939</span></span></code></pre></div>
+<span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a><span class="co">#&gt;   Parameter   Estimate        SE   CI_Lower  CI_Upper</span></span>
+<span id="cb12-26"><a href="#cb12-26" tabindex="-1"></a><span class="co">#&gt; 1    beta_b 0.05792323 0.1159205 -0.2406683 0.3565148</span></span></code></pre></div>
 <p>All these methods follow standard R conventions, making your
 <code>mlob_result</code> objects compatible with existing R workflows
 and familiar to users of other statistical packages.</p>
@@ -818,10 +814,12 @@ for regularized estimation in two-level models, users should be aware of
 the following limitations:</p>
 <ul>
 <li><p><strong>Local Grid Search</strong>:<br />
-The optimization is restricted to a local 5*sigma region around the ML
-estimate. Although this region captures the true MSE minimum with high
-probability (&gt;= 0.999 for J = 5), it does not guarantee
-identification of the global minimum.</p></li>
+The prior variance is searched within five standard deviations of the ML
+estimate of the between-group variance of the predictor (bounded below
+by 1% of its total variance). The minimum can lie on the boundary of
+this region, especially for few groups and a small ICC of the predictor;
+the estimate is then the best one within the searched region rather than
+the global minimum.</p></li>
 <li><p><strong>Assumption of Equal Group Sizes</strong>:<br />
 The estimator assumes equal group sizes to simplify the model. While
 averaging group sizes is a proposed solution, the method does not yet
